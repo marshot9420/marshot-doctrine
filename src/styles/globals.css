@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+*:before {
+  box-sizing: border-box;
+}
+
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  display: grid;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 160%;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+
+  min-height: 100vh;
+
+  @apply dark:bg-ebony text-darkMars dark:text-lightMars bg-white;
+}
+
+a {
+  @apply no-underline;
+}
+
+h1 {
+  @apply text-h1;
+}
+
+h2 {
+  @apply text-h2;
+}
+
+h3 {
+  @apply text-h3;
+}
+
+h4 {
+  @apply text-h4;
+}
+
+h5 {
+  @apply text-h5;
+}
+
+h6 {
+  @apply text-h6;
+}
+
+small {
+  @apply text-darkMars dark:text-lightMars text-small;
+}
+
+select {
+  @apply text-darkMars dark:text-lightMars;
+}
