@@ -15,10 +15,11 @@ const UserMenu = ({ isSidebar = false, active = false }: UserMenuProps) => {
     <ul
       className={clsx(
         isSidebar
-          ? 'flex w-full flex-col items-center space-y-4'
+          ? 'flex w-full flex-col items-center space-y-4 my-8'
           : 'hidden items-center space-x-4 md:flex md:w-144 md:justify-end',
       )}
     >
+      <TransparentButton href={URLS.CLIENT.HOME} label="블로그" active={active} />
       <TransparentButton href={URLS.CLIENT.LOGIN} label="로그인" active={active} />
     </ul>
   )

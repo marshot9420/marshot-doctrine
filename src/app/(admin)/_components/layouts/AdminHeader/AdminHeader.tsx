@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { DarkModeButton, HamburgerIcon, Logo, Sidebar } from '@/components'
 import { URLS } from '@/constants'
 
+import { AdminNavBar } from './AdminNavBar'
 import { UserMenu } from './UserMenu'
 
 const AdminHeader = () => {
@@ -51,7 +52,10 @@ const AdminHeader = () => {
           </div>
         </div>
       </header>
-      <Sidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar}>
+        <UserMenu isSidebar={true} />
+        <AdminNavBar isSidebar={true} />
+      </Sidebar>
     </>
   )
 }

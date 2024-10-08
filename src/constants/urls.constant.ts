@@ -9,5 +9,12 @@ export const URLS = {
 
   ADMIN: {
     HOME: '/heyum',
+    POSTS: '/heyum/posts',
+    CATEGORIES: '/heyum/categories',
+    COMMENTS: '/heyum/comments',
+    PORTFOLIOS: '/heyum/portfolios',
+    PROJECTS: '/heyum/projects',
+    STATS: '/heyum/stats',
+    REFERRALS: '/heyum/referrals',
   },
 } as const

@@ -56,7 +56,9 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <Sidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar}>
+        <NavBar isSidebar={true} />
+      </Sidebar>
     </>
   )
 }
