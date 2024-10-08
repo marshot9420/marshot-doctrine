@@ -11,8 +11,6 @@ import { Logo } from './Logo'
 import { NavBar } from './NavBar'
 import { Sidebar } from './Sidebar'
 
-import { headerContainerStyles, headerStyles } from './styles'
-
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
@@ -42,9 +40,12 @@ const Header = () => {
   return (
     <>
       <header
-        className={clsx(headerStyles.base, isVisible ? headerStyles.visible : headerStyles.hidden)}
+        className={clsx(
+          'shadow-lg bg-white dark:bg-ebony h-header fixed top-0 left-0 right-0 z-50 transition-transform duration-300',
+          isVisible ? 'transform translate-y-0' : 'transform -translate-y-full',
+        )}
       >
-        <div className={clsx(headerContainerStyles)}>
+        <div className={clsx('flex justify-between items-center h-full mx-8')}>
           <HamburgerIcon toggleSidebar={toggleSidebar} />
           <Logo />
           <NavBar />
