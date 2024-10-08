@@ -1,8 +1,7 @@
 import clsx from 'clsx'
 
-import { URLS } from '@/constants'
-
 import { TransparentButton } from '@/components'
+import { URLS } from '@/constants'
 
 interface UserMenuProps {
   isSidebar?: boolean
