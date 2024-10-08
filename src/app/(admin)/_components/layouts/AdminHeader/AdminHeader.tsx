@@ -1,19 +1,15 @@
 'use client'
 
+import clsx from 'clsx'
 import { useCallback, useEffect, useState } from 'react'
 
-import clsx from 'clsx'
-
+import { DarkModeButton, HamburgerIcon, Logo, Sidebar } from '@/components'
 import { URLS } from '@/constants'
 
-import { DarkModeButton } from '@/components/buttons'
-import { HamburgerIcon } from '@/components/icons'
+import { AdminNavBar } from './AdminNavBar'
+import { UserMenu } from './UserMenu'
 
-import { Logo } from '../Logo'
-import { NavBar } from '../NavBar'
-import { Sidebar } from '../Sidebar'
-
-const Header = () => {
+const AdminHeader = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -49,18 +45,19 @@ const Header = () => {
       >
         <div className={clsx('flex justify-between items-center h-full mx-8')}>
           <HamburgerIcon toggleSidebar={toggleSidebar} />
-          <Logo title="MARSHOT DOCTRINE" href={URLS.CLIENT.HOME} />
-          <NavBar />
+          <Logo title="관리자 페이지" href={URLS.ADMIN.HOME} />
+          <UserMenu />
           <div className="flex items-center space-x-4">
             <DarkModeButton />
           </div>
         </div>
       </header>
       <Sidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar}>
-        <NavBar isSidebar={true} />
+        <UserMenu isSidebar={true} />
+        <AdminNavBar isSidebar={true} />
       </Sidebar>
     </>
   )
 }
 
-export default Header
+export default AdminHeader

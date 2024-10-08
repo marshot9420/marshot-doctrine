@@ -1,1 +1,2 @@
-export * from "./DarkModeButton";
+export * from './DarkModeButton'
+export * from './TransparentButton'

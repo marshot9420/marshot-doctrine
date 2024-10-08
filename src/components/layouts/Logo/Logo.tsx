@@ -2,22 +2,22 @@ import Link from 'next/link'
 
 import clsx from 'clsx'
 
-import { APP, URLS } from '@/constants'
-
 interface LogoProps {
+  title: string
+  href: string
   isSidebar?: boolean
 }
 
-const Logo = ({ isSidebar = false }: LogoProps) => {
+const Logo = ({ title, href, isSidebar = false }: LogoProps) => {
   return (
     <div className={clsx(isSidebar ? 'text-center' : 'flex-1 hidden md:block')}>
-      <Link href={URLS.CLIENT.HOME}>
+      <Link href={href}>
         <h3
           className={clsx(
             isSidebar ? '' : 'text-darkMars dark:text-lightMars transform hidden md:block',
           )}
         >
-          {APP.INFO.TITLE}
+          {title}
         </h3>
       </Link>
     </div>
