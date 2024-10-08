@@ -4,5 +4,10 @@ export const URLS = {
     ABOUT: '/about',
     PORTFOLIO: '/portfolio',
     PROJECTS: '/projects',
+    LOGIN: '/login',
+  },
+
+  ADMIN: {
+    HOME: '/heyum',
   },
 } as const

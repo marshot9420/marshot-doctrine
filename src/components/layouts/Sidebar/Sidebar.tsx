@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react'
 
 import clsx from 'clsx'
 
+import { URLS } from '@/constants'
+
 import { Logo } from '../Logo'
 import { NavBar } from '../NavBar'
 
@@ -42,7 +44,7 @@ const Sidebar = ({ isOpen, closeSidebar }: SidebarProps) => {
       )}
     >
       <div className={clsx('flex flex-col items-center p-4')}>
-        <Logo isSidebar={true} />
+        <Logo title="MARSHOT DOCTRINE" href={URLS.CLIENT.HOME} isSidebar={true} />
         <NavBar isSidebar={true} />
       </div>
     </div>
