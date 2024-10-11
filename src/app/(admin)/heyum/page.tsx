@@ -1,4 +1,6 @@
-const AdminDashboard = () => {
+import type { NextPage } from 'next'
+
+const AdminDashboard: NextPage = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold">관리자 대시보드</h1>

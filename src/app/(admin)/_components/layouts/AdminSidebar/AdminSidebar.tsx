@@ -44,7 +44,7 @@ const AdminSidebar = ({ isOpen, children, closeSidebar }: AdminSidebarProps) => 
       )}
     >
       <div className={clsx('flex flex-col items-center p-4')}>
-        <Logo title="MARSHOT DOCTRINE" href={URLS.CLIENT.HOME} isSidebar={true} />
+        <Logo title="관리자 페이지" href={URLS.CLIENT.HOME} isSidebar={true} />
         {children}
       </div>
     </aside>
