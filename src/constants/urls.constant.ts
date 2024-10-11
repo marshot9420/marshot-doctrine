@@ -7,8 +7,8 @@ export const URLS = {
   },
 
   ADMIN: {
-    LOGIN: '/login',
     HOME: '/heyum',
+    LOGIN: '/heyum/login',
     POSTS: '/heyum/posts',
     CATEGORIES: '/heyum/categories',
     COMMENTS: '/heyum/comments',
