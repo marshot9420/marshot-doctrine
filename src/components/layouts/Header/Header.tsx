@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import { URLS } from '@/constants'
 
-import { DarkModeButton } from '@/components/buttons'
+import { DarkModeButton, ToggleSidebarButton } from '@/components/buttons'
 import { HamburgerIcon } from '@/components/icons'
 
 import { Logo } from '../Logo'
@@ -48,7 +48,9 @@ const Header = () => {
         )}
       >
         <div className={clsx('flex justify-between items-center h-full mx-8')}>
-          <HamburgerIcon toggleSidebar={toggleSidebar} />
+          <ToggleSidebarButton toggleSidebar={toggleSidebar}>
+            <HamburgerIcon />
+          </ToggleSidebarButton>
           <Logo title="MARSHOT DOCTRINE" href={URLS.CLIENT.HOME} />
           <NavBar />
           <div className="flex items-center space-x-4">

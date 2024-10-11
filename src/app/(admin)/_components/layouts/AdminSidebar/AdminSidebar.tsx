@@ -4,18 +4,17 @@ import { useEffect, useRef } from 'react'
 
 import clsx from 'clsx'
 
+import { Logo } from '@/components'
 import { URLS } from '@/constants'
 
-import { Logo } from '../Logo'
-
-interface SidebarProps {
+interface AdminSidebarProps {
   isOpen: boolean
   children?: React.ReactNode
 
   closeSidebar: () => void
 }
 
-const Sidebar = ({ isOpen, children, closeSidebar }: SidebarProps) => {
+const AdminSidebar = ({ isOpen, children, closeSidebar }: AdminSidebarProps) => {
   const sidebarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -52,4 +51,4 @@ const Sidebar = ({ isOpen, children, closeSidebar }: SidebarProps) => {
   )
 }
 
-export default Sidebar
+export default AdminSidebar

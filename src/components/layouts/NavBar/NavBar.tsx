@@ -10,7 +10,7 @@ interface NavBarProps {
 
 const NavBar = ({ isSidebar = false }: NavBarProps) => {
   return (
-    <nav className={clsx(isSidebar ? 'w-full' : 'hidden md:flex')}>
+    <nav className={clsx(isSidebar ? 'w-full mt-8' : 'hidden md:flex')}>
       <ul
         className={clsx(
           isSidebar ? 'flex flex-col space-y-4 w-full items-center' : 'flex items-center space-x-4',

@@ -3,14 +3,15 @@
 import clsx from 'clsx'
 import { useCallback, useEffect, useState } from 'react'
 
-import { DarkModeButton, HamburgerIcon, Logo, Sidebar } from '@/components'
+import { DarkModeButton, HamburgerIcon, Logo, ToggleSidebarButton } from '@/components'
 import { URLS } from '@/constants'
 
+import { AdminSidebar } from '../AdminSidebar'
 import { AdminNavBar } from './AdminNavBar'
 import { UserMenu } from './UserMenu'
 
 const AdminHeader = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -44,18 +45,20 @@ const AdminHeader = () => {
         )}
       >
         <div className={clsx('flex justify-between items-center h-full mx-8')}>
-          <HamburgerIcon toggleSidebar={toggleSidebar} />
+          <ToggleSidebarButton toggleSidebar={toggleSidebar} alwaysVisible={true}>
+            <HamburgerIcon />
+          </ToggleSidebarButton>
           <Logo title="관리자 페이지" href={URLS.ADMIN.HOME} />
-          <UserMenu />
           <div className="flex items-center space-x-4">
+            <UserMenu />
             <DarkModeButton />
           </div>
         </div>
       </header>
-      <Sidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar}>
+      <AdminSidebar isOpen={isSidebarOpen} closeSidebar={toggleSidebar}>
         <UserMenu isSidebar={true} />
         <AdminNavBar isSidebar={true} />
-      </Sidebar>
+      </AdminSidebar>
     </>
   )
 }

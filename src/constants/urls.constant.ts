@@ -4,10 +4,10 @@ export const URLS = {
     ABOUT: '/about',
     PORTFOLIO: '/portfolio',
     PROJECTS: '/projects',
-    LOGIN: '/login',
   },
 
   ADMIN: {
+    LOGIN: '/login',
     HOME: '/heyum',
     POSTS: '/heyum/posts',
     CATEGORIES: '/heyum/categories',

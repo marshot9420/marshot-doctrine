@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { AdminHeader } from '../_components'
 
 export const metadata: Metadata = {
-  title: 'ADMIN',
+  title: 'MARSHOT DOCTRINE',
   description: '관리자 페이지',
   robots: 'noindex, nofollow',
 }
