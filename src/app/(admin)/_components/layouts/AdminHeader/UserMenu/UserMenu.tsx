@@ -45,7 +45,7 @@ const UserMenu = ({ isSidebar = false, active = false }: UserMenuProps) => {
           <TransparentButton onClick={handleLogout} label="로그아웃" active={active} />
         </>
       ) : (
-        <TransparentButton href={URLS.ADMIN.LOGIN} label="로그인" active={active} />
+        <TransparentButton href={URLS.CLIENT.LOGIN} label="로그인" active={active} />
       )}
     </ul>
   )

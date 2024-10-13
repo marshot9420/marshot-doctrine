@@ -17,7 +17,7 @@ const NavBar = ({ isSidebar = false }: NavBarProps) => {
         )}
       >
         {Object.entries(URLS.CLIENT)
-          .filter(([key]) => key !== 'HOME')
+          .filter(([key]) => key !== 'HOME' && key !== 'LOGIN')
           .map(([key, value]) => (
             <li
               key={key}
