@@ -6,12 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "dotenv -e .env.development -- prisma generate --schema=./prisma/schema.prisma",
+    "db:migrate": "dotenv -e .env.development -- prisma migrate dev --schema=./prisma/schema.prisma",
+    "db:push": "dotenv -e .env.development prisma db push --schema=./prisma/schema.prisma --skip-generate",
+    "db:studio": "dotenv -e .env.development prisma studio --schema=./prisma/schema.prisma",
+    "db:reset": "echo '프로덕션 환경에서 사용하지 마세요!' && dotenv -e .env.development prisma migrate reset"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@hookform/resolvers": "^3.9.0",
     "@prisma/client": "^5.20.0",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.45.4",
     "bcryptjs": "^2.4.3",
     "clsx": "^2.1.1",
     "iron-session": "^8.0.3",
@@ -29,6 +36,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "postcss": "^8",
