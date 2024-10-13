@@ -15,10 +15,16 @@ enum SocialProvider {
   NAVER
 }
 
+enum UserRole {
+  USER
+  MARSHOT
+}
+
 model User {
   id       Int             @id @default(autoincrement())
   username String          @unique
   password String?
+  role     UserRole        @default(USER)
   socialId String?
   social   SocialProvider? @default(LOCAL)
 }
