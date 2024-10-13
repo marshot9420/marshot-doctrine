@@ -37,7 +37,7 @@ const Sidebar = ({ isOpen, children, closeSidebar }: SidebarProps) => {
   }, [isOpen, closeSidebar])
 
   return (
-    <div
+    <aside
       ref={sidebarRef}
       className={clsx(
         'bg-white dark:bg-ebony fixed top-0 left-0 w-96 h-full shadow-lg z-50 transform transition-transform duration-300',
@@ -48,7 +48,7 @@ const Sidebar = ({ isOpen, children, closeSidebar }: SidebarProps) => {
         <Logo title="MARSHOT DOCTRINE" href={URLS.CLIENT.HOME} isSidebar={true} />
         {children}
       </div>
-    </div>
+    </aside>
   )
 }
 

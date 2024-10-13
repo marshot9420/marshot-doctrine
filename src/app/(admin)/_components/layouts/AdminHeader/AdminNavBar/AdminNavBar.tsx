@@ -7,7 +7,6 @@ interface AdminNavBarProps {
   isSidebar?: boolean
 }
 
-// 한글 label과 URL을 매핑하는 배열
 const adminMenuLinks = [
   { label: '글 관리', href: URLS.ADMIN.POSTS },
   { label: '카테고리 관리', href: URLS.ADMIN.CATEGORIES },

@@ -19,7 +19,7 @@ const UserMenu = ({ isSidebar = false, active = false }: UserMenuProps) => {
       )}
     >
       <TransparentButton href={URLS.CLIENT.HOME} label="블로그" active={active} />
-      <TransparentButton href={URLS.CLIENT.LOGIN} label="로그인" active={active} />
+      <TransparentButton href={URLS.ADMIN.LOGIN} label="로그인" active={active} />
     </ul>
   )
 }
