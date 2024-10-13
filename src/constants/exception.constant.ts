@@ -23,5 +23,10 @@ export const EXCEPTION = {
       status: HttpStatusCode.InternalServerError,
       message: '로그인 중 알 수 없는 오류가 발생했습니다.',
     },
+
+    LOGOUT_ERROR: {
+      status: HttpStatusCode.InternalServerError,
+      message: '로그아웃 중 알 수 없는 오류가 발생했습니다.',
+    },
   },
 } as const
