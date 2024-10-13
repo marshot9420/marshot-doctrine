@@ -54,6 +54,10 @@ const config: Config = {
         header: '5.6rem',
       },
 
+      width: {
+        144: '36rem',
+      },
+
       minHeight: {
         inherit: 'inherit',
       },

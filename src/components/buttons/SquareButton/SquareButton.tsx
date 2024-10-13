@@ -37,7 +37,8 @@ const SquareButton = ({
         wide && 'w-full',
 
         // 변형 클래스
-        variant === 'normal' && 'border-black bg-black text-white',
+        variant === 'normal' &&
+          'border-darkMars bg-darkMars text-white dark:border-lightMars dark:bg-lightMars dark:text-darkMarsHover dark:hover:bg-darkMarsHover dark:hover:text-lightMars',
         variant === 'reverse' && 'border-white bg-white text-black',
         variant === 'outline' && 'border-gray-300 bg-white text-black',
         variant === 'primary-outline' && 'border-blue-500 text-blue-500 bg-white',
@@ -64,7 +65,7 @@ const SquareButton = ({
         disabled && 'cursor-not-allowed border-gray-300 bg-gray-300 text-white',
 
         // 기본 hover 클래스
-        'transition-colors hover:bg-lightMars hover:text-black',
+        'transition-colors hover:bg-lightMars hover:text-darkMarsHover',
       )}
       disabled={disabled}
       {...rest}

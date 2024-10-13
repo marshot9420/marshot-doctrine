@@ -32,9 +32,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           type={type}
           placeholder={placeholder}
           className={clsx(
-            'rounded-md border px-4 py-2 text-normal',
+            'rounded-md border px-4 py-2 text-normal placeholder-darkMars dark:placeholder-lightMars',
             error ? 'border-red' : 'border-gray-300',
-            'focus:border-lightMars focus:outline-none',
+            'focus:border-darkMars focus:outline-none dark:focus:border-lightMars',
           )}
           {...rest}
         />
