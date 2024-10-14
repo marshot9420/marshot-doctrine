@@ -28,3 +28,11 @@ model User {
   socialId String?
   social   SocialProvider? @default(LOCAL)
 }
+
+model Category {
+  id       Int        @id @default(autoincrement())
+  name     String     @unique
+  parentId Int?
+  parent   Category?  @relation("Subcategories", fields: [parentId], references: [id])
+  children Category[] @relation("Subcategories")
+}
